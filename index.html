@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>動画検索アプリ</title>
+  </head>
+    <body>
+
+      <!-- ヘッダー -->
+      <header class="header">
+        <p>my favorites...</p>
+      </header>
+
+        <div id="app">
+
+          <!-- 検索BOX -->
+          <div class="search">
+            <input v-model="keyword" placeholder=" keyword"/>
+            <button @click="searchMovies">Search</button>
+          </div>
+
+          <!-- コンテンツ -->
+          <div class="container">
+            <div v-for="movie in results" v-bind:key="movie.id.videoId">
+              <a v-bind:href="'https://www.youtube.com/watch?v=' + movie.id.videoId">         <!-- 動画のリンク先 -->
+                <img width=320 height=180 v-bind:src="movie.snippet.thumbnails.medium.url"/>  <!-- 動画のサムネイルを表示 -->
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+        <script src="script.js"></script>
+
+    </body>
+</html>

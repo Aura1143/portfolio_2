@@ -1,0 +1,82 @@
+*{
+  margin:0; /* 外側の余白を消す */
+}
+
+body{
+  width: 100%;
+  height:100%;
+  background-image:url("bg.jpg");
+  background-size: cover;
+}
+
+/*------------------------------------------------------------------------------
+ヘッダー
+------------------------------------------------------------------------------*/
+.header {
+  height: auto;
+  padding:0;                  /* 内側の余白を消す */
+  text-align: left;           /* 左寄せ */
+  background-color: #000000;
+  color:#ffffff;              /* 文字色 = "白" */
+  font-size: 20px;
+}
+
+/*------------------------------------------------------------------------------
+検索BOX
+------------------------------------------------------------------------------*/
+.search {
+  width: 500px;
+  height: 40px;
+  margin: 10px auto;
+  padding: 0;
+  background: #444;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  border: 1px solid #fff;
+}
+.search input {
+  width: 370px;
+  padding: 10px 5px;
+  float: left;
+  color: #ccc;
+  border: 0;
+  background: transparent;
+  border-radius: 3px 0 0 3px;
+}
+.search input:focus {
+  outline: 0;
+  background: transparent;
+}
+.search button {
+  position: relative;
+  float: right;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  height: 40px;
+  width: 120px;
+  color: #fff;
+  background: transparent;
+  border-left: 1px solid #fff;
+  border-radius: 0 3px 3px 0;
+}
+.search button:hover {
+  background: #fff;
+  color: #444;
+}
+.search button:active {
+  box-shadow: 0px 0px 12px 0px #e1e1e1;
+}
+.search button:focus {
+  outline: 0;
+}
+
+/*------------------------------------------------------------------------------
+コンテンツ
+------------------------------------------------------------------------------*/
+.container {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;  /* 子要素を折り返し、複数行に上から下へ並べる */
+  justify-content: space-around;  /* 両端の子要素も含め、均等に間隔をあけて配置 */
+}
