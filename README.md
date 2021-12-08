@@ -15,6 +15,6 @@
 ---
 ### 使用技術
 - HTML / CSS
-- javascript（Vue.js）
+- javascript（Vue.js v2.6.14）
 - Web API（YouTube Data API v3）
 - axios
